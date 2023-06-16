@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+nav.floating {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background-color: #d0d0d0;
+}
+
 .first-view {
     height: calc(100vh - 110px);
     background-image: url(../images/index/bg_main.jpg);
@@ -100,12 +107,11 @@ img {
     font-family: 'Cherry Bomb One', cursive;
 }
 
-@media (max-width: 800px) {
-    .site-menu ul {
+@media(max-width: 800px){
+    .site-menu ul{
         display: block;
         text-align: center;
     }
-
     .site-menu li {
         margin-top: 20px;
     }
@@ -118,50 +124,43 @@ img {
         background-color: #ffffff;
         height: 50px;
         z-index: 10;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
-
-    .header-inner {
+    .header-inner{
         padding-left: 20px;
         padding-right: 20px;
         height: 100%;
+        position: relative;
     }
 
-    .header-logo {
+    .header-logo{
         width: 100px;
     }
 
-    .main {
-        padding-top: 50px;
+    .header-site-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: #ffffff;
+        background-color: #736e62;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        display: none;
     }
 
-    .footer-logo {
+    .header-site-menu.is-show {
+        display: block;
+    }
+
+    .main{
+        padding-top: 50px;
+    }
+    .footer-logo{
         margin-top: 60px;
     }
 
-    .copyright {
+    .copyright{
         margin-top: 50px;
     }
-}
-
-.footer {
-    color: #ffffff;
-    background-color: #24211b;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-logo {
-    display: block;
-    width: 235px;
-    margin-top: 90px;
-}
-
-.copyright {
-    font-size: 14pt;
-    font-weight: bold;
-    margin-top: 90px;
 }
